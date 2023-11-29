@@ -1,0 +1,38 @@
+﻿<Page x:Class="PractikWork1.Page3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PractikWork1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page3">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Введите скорость лодки" Style="{StaticResource MainText}"/>
+        <TextBox Name="NumberVTextBox" Grid.Column="1"/>
+        <TextBlock Text="Введите скорость течения" Grid.Row="1" Style="{StaticResource MainText}"/>
+        <TextBox Name="NumberUTextBox" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Text="Введите время по озеру" Grid.Row="2" Style="{StaticResource MainText}"/>
+        <TextBox Name="NumberT1TextBox" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock Text="Введите время против течения" Grid.Row="3" Style="{StaticResource MainText}"/>
+        <TextBox Name="NumberT2TextBox" Grid.Column="1" Grid.Row="3"/>
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2">
+            <TextBlock Text="Результаты:" HorizontalAlignment="Center"/>
+            <TextBox Name="AnswerTextBox" Height="90" Background="White" IsReadOnly="True" VerticalScrollBarVisibility="Hidden"/>
+        </StackPanel>
+        <Button Name="CompliteButton" Grid.Row="5" Grid.ColumnSpan="2" Content="Выполнить" Click="CompliteButton_Click" Style="{StaticResource ButtonAlert}"/>
+    </Grid>
+</Page>
